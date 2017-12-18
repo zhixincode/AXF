@@ -1,0 +1,143 @@
+
+/*底部我的样式*/
+footer .mine span{
+    background:url(/static/base/img/mine1.png) no-repeat;
+    background-size:0.513889rem;
+}
+
+footer .mine{
+    color: gold;
+}
+/*容器样式*/
+.container {
+    padding: 1.5rem 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 3rem;
+    position: fixed;
+    box-sizing: border-box;
+    overflow-scrolling: auto;
+}
+/*第一部分样式*/
+#first{
+    width: 100%;
+    background: pink;
+    height: 3.5rem;
+}
+#first div:first-child{
+    margin-left: 0.2rem;
+    margin-top: 0.4rem;
+
+}
+#photo {
+    font-size: 1.2rem;
+    border-radius: 1.3rem;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    text-align: center;
+    line-height: 2rem;
+    float: left;
+}
+#login{
+    /*left:7rem;*/
+    padding-left: 0.2rem;
+    float: left;
+}
+#login div:first-child{
+    font-size: 0.6rem;
+}
+#login div:last-child{
+    font-size: 0.5rem;
+}
+#dengji{
+    padding-left: 0.1rem;
+}
+#cla{
+    margin-top: 0.4rem;
+}
+#grade{
+    color: red;
+    padding-left: 0.2rem;
+}
+#register a{
+    padding-top: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    float: right;
+    margin-right: 0.7rem;
+}
+
+
+
+
+/*第二部分样式*/
+#second{
+   width: 100%;
+    background: #edff0b;
+    height: 1rem;
+}
+#second span{
+    padding-top: 0.2rem;
+}
+#second span:first-child{
+    padding-left: 3.5rem;
+    color: red;
+}
+#second span:last-child{
+    color: white;
+}
+
+
+
+/*第三部分样式*/
+#third_one{
+    margin-top: 0.2rem;
+}
+#third_one div:first-child{
+    margin-left: 0.4rem;
+    float: left;
+}
+#third_one div:first-child a{
+    font-size: 0.5rem;
+    color: #1a1a1a;
+}
+#third_one div:last-child{
+    float: right;
+    margin-right: 0.5rem;
+}
+#third_one div:last-child a{
+    font-size:0.5rem;
+    color: #8c8c8c;
+}
+
+
+
+#third_two div{
+    width:2.5rem;
+    float: left;
+}
+#tubiao{
+   padding: 0.5rem;
+    color: black;
+}
+.wenzi{
+    margin: 0px;
+    padding-left: 0.3rem;
+    font-size: 13px;
+    color: #3d3d3d;
+    /*text-align: center;*/
+    /*line-height: 1.5rem;*/
+}
+
+#third_three a{
+    font-size: 0.4rem;
+    color: #8c8c8c;
+    padding-left: 3.5rem;
+    margin-top: 0.5rem;
+}
+#third_three{
+    margin-top: 0.5rem;
+}
+

@@ -1,0 +1,74 @@
+{% extends 'App/Base.html' %}
+{% load static %}
+{% block personResource %}
+    <link rel="stylesheet" href="{% static 'market/css/market.css' %}">
+    <script type="text/javascript" src="{% static 'market/js/market.js' %}"></script>
+{% endblock %}
+{% block content %}
+    <div class="market">
+        <div class="aside">
+            {% for foodtype in foodtypes %}
+                <div class="type_item">
+                    <span></span>
+                    <a href="{% url 'axf:marketcategory' foodtype.typeid 0 0 %}">{{ foodtype.typename }}</a>
+                </div>
+
+            {% endfor %}
+        </div>
+        <div class="nav">
+            <div class="nav_selection clearfix">
+                <div class="left_child_type">全部类型<span class="glyphicon glyphicon-chevron-down"></span></div>
+                <div class="right_order">综合排序<span class="glyphicon glyphicon-chevron-down"></span></div>
+            </div>
+            <ul id="goods_container">
+                {% for good in goodsList %}
+                    <li id="goods_list">
+                        <div>
+
+                           <img src="{{ good.productimg }}" id="imgp">
+
+                            <div id="information">
+                                <div id="name">{{ good.productname }}</div>
+                                <div id="jingxuan"><span>精选</span><span>{{ good.pmdesc }}</span></div>
+                                <div id="weight">{{ good.specifics }}</div>
+                                <div>
+                                    <span id="price1"><span class="glyphicon glyphicon-jpy"></span>&nbsp;&nbsp;{{ good.price }}</span>
+                                    <span class="glyphicon glyphicon-jpy" id="price2">{{ good.marketprice }}</span>
+                                    <span class="glyphicon glyphicon-minus" id="subshop" ga="{{ good.productid }}"></span>
+                                    <span id="{{ good.productid }}">{{ good.num|default:0 }}</span>
+                                    <span class="glyphicon glyphicon-plus" id="addshop" ga="{{ good.productid }}"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+                {% endfor %}
+
+            </ul>
+            <div class="goods_child_category">
+
+                <div>
+                    {% for item in items %}
+                        <a href="{% url 'axf:marketcategory' foodtypeid item.childType orderRule %}">{{ item.childName }}</a>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+
+            <div class="goods_order">
+
+                <div>
+                    <a href="{% url 'axf:marketcategory' foodtypeid childcid 0 %}">综合排序</a>
+                    <a href="{% url 'axf:marketcategory' foodtypeid childcid 1 %}">价格<span class="glyphicon glyphicon-arrow-up"></span></a>
+                    <a href="{% url 'axf:marketcategory' foodtypeid childcid 2 %}">价格<span class="glyphicon glyphicon-arrow-down"></span></a>
+                    <a href="{% url 'axf:marketcategory' foodtypeid childcid 3 %}">销量</a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

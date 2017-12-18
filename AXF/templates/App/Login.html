@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        input {
+            width: 99%;
+            height: 6rem;
+            margin: 1.5rem auto;
+            font-size: 40px;
+            border: 1px solid black;
+        }
+        #button{
+            background: greenyellow;
+        }
+        h2 {
+            width: 100%;
+            height: 5rem;
+            text-align: center;
+            line-height: 5rem;
+            font-size: 60px;
+            position: relative;
+        }
+        h2 a{
+            text-decoration: none;
+            position: absolute;
+            top:5px;
+            left:10px;
+            font-size: 60px;
+
+        }
+        #register{
+            color: darkgrey;
+            font-size: 30px;
+        }
+        #findpwd{
+            color: darkgrey;
+            font-size: 30px;
+            float: right;
+        }
+
+    </style>
+    <script src="{% static 'base/js/jquery.js' %}"></script>
+    <script>
+        $(function () {
+            $('#username').change(function () {
+                var uname = $('#username').val();
+                var upass = $('#password').val();
+                var url = 'http://127.0.0.1:8000/axf/logincheck';
+{#                $.get(url, {'username': uname,'password':upass}, function (result) {#}
+{#                    if (result.status === 'usernameFalse') {#}
+{#                        alert('该用户不存在 ，请确认后重新输入或注册');#}
+{#                        window.location=('/axf/login')#}
+{#                    }#}
+{#                })#}
+                $('#password').change(function () {
+                    var uname = $('#username').val();
+                    var upass = $(this).val();
+                    var url = 'http://127.0.0.1:8000/axf/logincheck';
+                    $.get(url, {'username': uname,'password':upass}, function (result) {
+                        if (result.status === 'pwdFalse') {
+                            alert('密码错误，请重新输入');
+                            window.location.href='http://127.0.0.1:8000/axf/login/'
+                        }
+
+                    })
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+
+<h2><a href="{% url 'axf:mine' %}">&lt;</a>登录</h2>
+<form action="{% url 'axf:logincheck' %}">
+    用户名：<input id="username" type="text" name="username" placeholder="请输入用户名"><br>
+    密码：<input id="password" type="password" name="password" placeholder="请输入密码"><br>
+    <input id="button" type="submit" value='登录'><br>
+</form>
+</body>
+</html>
+
+
+
+
+

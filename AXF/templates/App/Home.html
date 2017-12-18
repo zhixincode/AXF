@@ -1,0 +1,115 @@
+{% extends 'App/Base.html' %}
+{% load static %}
+{% block personResource %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <script type="text/javascript" src="{% static 'home/js/home.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div id="home">
+
+
+        <div class="swiper-container" id="topSwiper">
+            <div class="swiper-wrapper">
+
+                {% for wheel in wheelList %}
+                    <div class="swiper-slide"><img src="{{ wheel.img }}"></div>
+                {% endfor %}
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        {#        首页导航     #}
+        <div class="topMenu clearfix">
+
+            {% for nav in navList %}
+                {#                trackid   主要是用在页面跳转  页面拼接的关键字  #}
+                <a href="#">
+                    <dl>
+                        <dt><img src="{{ nav.img }}" alt="NavImg"></dt>
+                        <dd>{{ nav.name }}</dd>
+                    </dl>
+                </a>
+            {% endfor %}
+
+        </div>
+
+        <div id="swiperMenu  clearfix">
+            <div class="swiper-container" id="swiperMustBuy">
+
+                <div class="swiper-wrapper">
+
+                    {% for mustbuy in mustBuyList %}
+                        <div class="swiper-slide"><img src="{{ mustbuy.img }}"></div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <div class="CVS">
+
+                <a href="#"><img src="{{ shop1.img }}" alt="便利店"></a>
+
+                <div class="shop_two">
+                    {% for shop2Item in shop2 %}
+                        <a href="#"><img src="{{ shop2Item.img }}"></a>
+                    {% endfor %}
+
+                </div>
+
+                <div class="shop_three">
+                    {% for shop3Item in shop3 %}
+                        <a href="#"><img src="{{ shop3Item.img }}"></a>
+                    {% endfor %}
+
+                </div>
+
+                <div class="shop_four">
+
+                    {% for shop4Item in shop4 %}
+                        <a href="#"><img src="{{ shop4Item.img }}"></a>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="mainshow_list">
+
+            {% for mainshow in mainshowList %}
+                <h3>{{ mainshow.name }}</h3>
+                <a href="#"><img src="{{ mainshow.img }}"></a>
+
+                <ul>
+                    <li>
+                        <img src="{{ mainshow.img1 }}">
+                        <p class="longname">{{ mainshow.longname1 }}</p>
+                        <p class="longprice">{{ mainshow.price1 }}</p>
+                    </li>
+                    <li>
+                        <img src="{{ mainshow.img2 }}">
+                        <p class="longname">{{ mainshow.longname2 }}</p>
+                        <p class="longprice">{{ mainshow.price2 }}</p>
+                    </li>
+                    <li>
+                        <img src="{{ mainshow.img3 }}">
+                        <p class="longname">{{ mainshow.longname3 }}</p>
+                        <p class="longprice">{{ mainshow.price3 }}</p>
+                    </li>
+
+                </ul>
+
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

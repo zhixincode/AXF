@@ -1,0 +1,252 @@
+footer .home span {
+    background: url(/static/base/img/home1.png) no-repeat;
+    background-size: 0.513889rem;
+}
+
+footer .home {
+    color: gold;
+}
+
+/*
+    padding的一个bug
+*/
+#home {
+    padding: 1.35rem 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 3rem;
+    position: fixed;
+    box-sizing: border-box;
+    overflow-scrolling: auto;
+}
+
+
+#topSwiper {
+    height: 3.95rem;
+    width: 10rem;
+    overflow: hidden;
+}
+
+#topSwiper img {
+    width: 100%;
+    height: 100%;
+}
+
+#topSwiper div a {
+    display: inline-block;
+    height: 3.95rem;
+    width: 10rem;
+}
+
+.topMenu {
+    margin: 0px;
+    padding-bottom: 0.1rem;
+}
+
+.topMenu a {
+    /*margin: 0.35rem 0 0.26rem;*/
+    background: white;
+    width: 2.5rem;
+    float: left;
+}
+
+.topMenu a dl {
+    width: 2.5rem;
+}
+
+.topMenu a dd {
+
+    width: 2.5rem;
+
+    text-align: center;
+    font-size: 0.35rem;
+}
+
+.topMenu a dl img {
+    width: 2.5rem;
+}
+
+#swiperMenu {
+    margin-top: 0px;
+    width: 100%;
+    height: 3rem;
+}
+
+/*
+#swiperMenu li{
+  width:3.333333rem
+}*/
+#swiperMenu img {
+    width: 100%;
+    height: 3rem;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.CVS {
+    background: white;
+    overflow: hidden;
+}
+
+.CVS h2 img {
+    width: 100%;
+}
+
+.CVS fieldset {
+    border: none;
+    padding: 0;
+}
+
+.CVS .shop_two > a {
+    display: inline-block;
+    width: 49%;
+}
+
+.CVS .shop_two img {
+    width: 100%;
+}
+
+.CVS .shop_three {
+    display: flex;
+}
+
+.CVS .shop_three a {
+    width: 2.5rem;
+    text-align: center;
+    font-size: 0.35rem;
+}
+
+.CVS .shop_three img {
+    width: 2.5rem;
+}
+
+.CVS .shop_four {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.CVS .shop_four a {
+    list-style: none;
+    width: 5rem;
+}
+
+
+.CVS .shop_four img {
+    width: 100%;
+}
+
+.mainshow_list {
+    background-color: white;
+}
+
+.mainshow_list h3{
+    margin: 0.2rem auto 0;
+    padding: 0.2rem 0;
+    width: 9.2rem;
+    text-align: center;
+    height: 1.2rem;
+    clear: both;
+    display: block;
+}
+
+
+
+.mainshow_list > a img{
+    width: 100%;
+    height: 2rem;
+}
+
+.mainshow_list ul li{
+    width: 3.3rem;
+    float: left;
+}
+
+.mainshow_list ul li img{
+    width: 100%;
+}
+
+.mainshow_list ul li .longname{
+    font-size: 10px;
+}
+
+.mainshow_list ul li .longprice{
+    font-size: 10px;
+    color: red;
+}
+
+.mainInfo > section h3 > span {
+    background-color: yellow;
+    width: 0.6rem;
+    height: 0.1rem;
+    position: absolute;
+    bottom: 0.25rem;
+    left: 4.3rem;
+}
+
+.mainInfo > section > div > a > img {
+    width: 100%;
+}
+
+.mainInfo > section > ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainInfo > section > ul > li {
+    width: 2.6rem;
+    position: relative;
+}
+
+.mainInfo > section > ul > li > a {
+    font-size: 0.4rem;
+    color: red;
+    display: block;
+}
+
+.mainInfo > section > ul > li > a > img {
+    width: 100%;
+}
+
+.mainInfo > section > ul > li > a > s {
+    color: grey;
+    font-size: 0.3rem;
+}
+
+.mainInfo .description {
+    font-size: 0.37rem;
+    color: black;
+    width: 100%;
+    display: block;
+    line-height: 1.2em;
+    height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.mainInfo > section > ul > li > button {
+    border: 1px solid lightgrey;
+    border-radius: 1111px;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+    line-height: 0.0rem;
+    text-align: center;
+    color: orangered;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 3.6rem;
+    background: white;
+}
+
+.mainInfo > section > ul > li > button > span {
+    position: relative;
+    top: -0.05rem;
+    margin: auto;
+}

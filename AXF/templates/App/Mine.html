@@ -1,0 +1,77 @@
+{% extends 'App/Base.html' %}
+{% load static %}
+{% block personResource %}
+    <link rel="stylesheet" href="{% static 'mine/css/mine.css' %}">
+    {#    <script type="text/javascript" src="{% static 'mine/js/mine.js' %}"></script>#}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div id="first"  class="clearfix">
+            <div class="glyphicon glyphicon-user" id="photo">
+            </div>
+            <div id="login">
+                {% ifequal username '点击登录' %}
+                <a href="{% url "axf:login" %}">{{ username }}</a>
+            {% else %}
+                <a href="{% url "axf:mine" %}">{{ username }}</a>
+            {% endifequal %}
+                <div id="cla">
+                    <span class="glyphicon glyphicon-fire" id="dengji"></span>
+                    <span id="grade">等级</span>
+                </div>
+            </div>
+            <div id="register"><a href="{% url 'axfa:register' %}">注册</a></div>
+        </div>
+        <div id="second">
+            <span class="glyphicon glyphicon-heart" id="shoucang"></span>
+            <span>商品收藏</span>
+        </div>
+        <div id="third">
+            <div id="third_one" class="clearfix">
+                <div><a href="#">我的订单</a></div>
+                <div><a href="#">查看全部订单></a></div>
+            </div>
+            <div id="third_two" class="clearfix">
+                <div>
+                    <div class="glyphicon glyphicon-usd" id="tubiao"></div>
+                    <div class="wenzi">待付款</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-envelope" id="tubiao"></div>
+                    <div class="wenzi">待收货</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-pencil" id="tubiao"></div>
+                    <div class="wenzi">待评价</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-retweet" id="tubiao"></div>
+                    <div class="wenzi">退款/售后</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-bullhorn" id="tubiao"></div>
+                    <div class="wenzi">积分</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-credit-card" id="tubiao"></div>
+                    <div class="wenzi">优惠券</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-import" id="tubiao"></div>
+                    <div class="wenzi">收货地址</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-phone-alt" id="tubiao"></div>
+                    <div class="wenzi">客服/反馈</div>
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-asterisk" id="tubiao"></div>
+                    <div class="wenzi">关于我们</div>
+                </div>
+            </div>
+            <div id="third_three">
+                <a href="/quit/">退出当前账号</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
