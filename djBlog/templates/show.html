@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block maincontent %}
+    {% for article in articles %}
+        <p>文章标题：{{ article.aname }}</p>
+        <p>文章内容：{{ article.acontent }}</p>
+        <p>文章作者：{{ article.aauthor }}</p>
+        <p>书写时间：{{ article.atime }}</p>
+        <p>***********************************</p>
+    {% endfor %}
+{% endblock %}

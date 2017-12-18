@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{# viewport主要用来适配移动端页面 #}
+{#    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />#}
+
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/swiper.css' %}">
+    <script type="text/javascript" src="{% static 'base/js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'base/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'base/js/swiper.jquery.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
+    <script type="text/javascript" src="{% static 'base/js/base.js' %}"></script>
+
+    <title>{{ pageTitle }}</title>
+
+    {% block personResource %}
+
+    {% endblock %}
+
+</head>
+<body>
+
+    <div>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>

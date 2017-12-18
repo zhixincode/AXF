@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block personResource %}
+    <script type="text/javascript" src="{% static 'base/js/time.js' %}"></script>
+{% endblock %}
+{% block maincontent %}
+    <form action="/success/" method="post">
+    <p>请输入文章标题：</p>
+    <input type="text"placeholder="请输入文章标题" name="aname">
+    <p>请输入文章内容：</p>
+    <textarea name="acontent" style="width:300px;height:100px;border: 2px;color: #761c19" placeholder="请输入文章内容"></textarea>
+    <p>请写下签名</p>
+    <input name="author" type="text"placeholder="请输入签名">
+    <p>写作时间:<p id="time" name="time">{{ shijian }}</p></p>
+    <input type="submit"value="提交">
+    </form>
+{% endblock %}
